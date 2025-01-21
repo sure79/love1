@@ -5,22 +5,19 @@
   <title>수비학 타로 연애 해법</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- 구글 폰트 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Pretendard 폰트 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 
   <style>
     :root {
-      --primary-color: #7c3aed;
-      --primary-hover: #6d28d9;
-      --text-dark: #1f2937;
-      --text-light: #4b5563;
-      --background-light: #f9fafb;
-      --card-background: #ffffff;
+      --primary: #7c3aed;
+      --primary-dark: #6d28d9;
+      --text-primary: #1f2937;
+      --text-secondary: #4b5563;
+      --background: #f9fafb;
+      --border-color: #e5e7eb;
       --accent-yellow: #fcd34d;
       --accent-red: #ef4444;
-      --section-spacing: 4rem;
     }
 
     * {
@@ -30,186 +27,247 @@
     }
 
     body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: var(--background-light);
-      color: var(--text-dark);
+      font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      background: var(--background);
+      color: var(--text-primary);
       line-height: 1.7;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Gowun Batang', serif;
-      letter-spacing: -0.02em;
-      line-height: 1.4;
+      letter-spacing: -0.3px;
     }
 
     .container {
-      max-width: 640px;
+      max-width: 768px;
       margin: 0 auto;
-      padding: 0 1.25rem;
+      padding: 0 24px;
     }
 
-    /* 문제 제기 섹션 */
-    .problem-section {
-      background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    /* 헤더 스타일 */
+    .hero-section {
+      background: linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: white;
-      padding: 4rem 0 5rem;
-      margin-bottom: -3rem;
+      padding: 64px 0;
       text-align: center;
     }
 
-    .problem-section h1 {
-      font-size: 2rem;
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
       margin-bottom: 1.5rem;
+      line-height: 1.3;
     }
 
+    /* 문제 제기 카드 */
     .problem-card {
       background: white;
-      border-radius: 1rem;
-      padding: 2rem;
-      margin-top: 2rem;
-      color: var(--text-dark);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: -48px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
 
-    /* 솔루션 섹션 */
-    .solution-section {
-      background: white;
-      padding: 4rem 0;
-      margin-top: 3rem;
-    }
-
-    .solution-card {
-      background: #f8f7ff;
-      border-radius: 1rem;
-      padding: 2rem;
-      margin-top: 2rem;
-      border: 2px solid #e9e8ff;
-    }
-
-    /* 새로운 문제 제기 섹션 */
-    .new-problem-section {
-      background: #fffbeb;
-      padding: 4rem 0;
-      margin-top: var(--section-spacing);
-      border-top: 3px solid #fcd34d;
-    }
-
-    /* 최종 솔루션 섹션 */
-    .final-solution-section {
-      background: #f3f4f6;
-      padding: 4rem 0;
-      margin-top: var(--section-spacing);
-    }
-
-    /* 버튼 스타일 */
-    .btn {
-      display: inline-block;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      font-weight: 500;
-      text-align: center;
-      transition: all 0.2s;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background-color: var(--primary-color);
-      color: white;
-      box-shadow: 0 2px 4px rgba(124, 58, 237, 0.2);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-hover);
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background-color: white;
-      color: var(--primary-color);
-      border: 2px solid var(--primary-color);
-    }
-
-    .btn-secondary:hover {
-      background-color: #f8f7ff;
-    }
-
-    /* 체크리스트 스타일 */
+    /* 체크리스트 */
     .checklist {
-      background: white;
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      margin: 1.5rem 0;
+      list-style: none;
+      margin: 16px 0;
     }
 
     .checklist li {
-      list-style: none;
-      margin-bottom: 0.75rem;
-      padding-left: 2rem;
+      padding-left: 28px;
       position: relative;
+      margin-bottom: 12px;
     }
 
     .checklist li::before {
       content: "✓";
       position: absolute;
       left: 0;
-      color: var(--primary-color);
+      color: var(--primary);
+    }
+
+    /* 버튼 스타일 */
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 2px 4px rgba(124, 58, 237, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    /* 섹션 스타일 */
+    section {
+      padding: 64px 0;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    /* 솔루션 카드 */
+    .solution-card {
+      background: #f8f7ff;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      border: 2px solid #e9e8ff;
+    }
+
+    /* 후기 섹션 */
+    .testimonial-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    .rating {
+      color: #fbbf24;
+      margin-bottom: 8px;
+    }
+
+    .testimonial-title {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    /* FAQ 섹션 */
+    .faq-section {
+      background: #f8fafc;
+      padding: 48px 0;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-item h4 {
+      color: var(--primary);
+      font-size: 1.125rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-item h4::before {
+      content: "Q";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      margin-right: 12px;
+      font-size: 0.875rem;
     }
 
     /* 가격 카드 */
     .price-card {
       background: white;
-      border-radius: 1rem;
-      padding: 2rem;
-      margin-top: 2rem;
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 32px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
 
     .price {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 700;
-      color: var(--primary-color);
-      margin: 1rem 0;
+      color: var(--primary);
+      margin: 24px 0;
+    }
+
+    /* 최종 CTA 섹션 */
+    .final-cta {
+      background: linear-gradient(to bottom, #f8fafc 0%, white 100%);
+      text-align: center;
+      padding: 64px 0;
     }
 
     /* 반응형 디자인 */
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .container {
-        padding: 0 1rem;
+        padding: 0 20px;
       }
 
-      .problem-section h1 {
-        font-size: 1.75rem;
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 48px 0;
       }
 
       .btn {
         width: 100%;
-        margin-bottom: 0.5rem;
+        margin-bottom: 8px;
       }
+
+      .price-card {
+        padding: 24px;
+      }
+    }
+
+    /* 푸터 */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border-color);
     }
   </style>
 </head>
 <body>
-  <!-- 1. 문제 제기 섹션 -->
-  <section class="problem-section">
+  <!-- 히어로 섹션 -->
+  <section class="hero-section">
     <div class="container">
       <h1>당신의 연애,<br>이런 고민하고 있나요?</h1>
       <p>"이 사람이 정말 내 운명일까?"<br>"왜 자꾸 같은 패턴이 반복될까?"</p>
-      
-      <div class="problem-card">
-        <h3>많은 분들이 겪고 있는 연애 고민</h3>
-        <ul class="checklist">
-          <li>대화가 잘 안 통하는 것 같아요</li>
-          <li>자주 싸우는데 해결은 안 되는 것 같아요</li>
-          <li>이 관계를 계속 이어가도 될지 고민이에요</li>
-        </ul>
-        <a href="#solution" class="btn btn-primary">해결책 보기</a>
-      </div>
     </div>
   </section>
 
-  <!-- 2. 첫 번째 솔루션 (무료 PDF) -->
-  <section id="solution" class="solution-section">
+  <!-- 문제 제기 카드 -->
+  <div class="container">
+    <div class="problem-card">
+      <h3>많은 분들이 겪고 있는 연애 고민</h3>
+      <ul class="checklist">
+        <li>대화가 잘 안 통하는 것 같아요</li>
+        <li>자주 싸우는데 해결은 안 되는 것 같아요</li>
+        <li>이 관계를 계속 이어가도 될지 고민이에요</li>
+      </ul>
+      <a href="#solution" class="btn btn-primary">해결책 보기</a>
+    </div>
+  </div>
+
+  <!-- 무료 PDF 섹션 -->
+  <section id="solution">
     <div class="container">
       <h2>먼저, 무료로 제공되는<br>연애 유형 분석을 확인해보세요</h2>
       
@@ -228,8 +286,8 @@
     </div>
   </section>
 
-  <!-- 3. 새로운 문제 제기 -->
-  <section class="new-problem-section">
+  <!-- 새로운 문제 제기 섹션 -->
+  <section class="new-problem-section" style="background: #fffbeb;">
     <div class="container">
       <h2>하지만 실제 연애는<br>더 복잡할 수 있습니다</h2>
       
@@ -241,7 +299,7 @@
           <li>상대방이 전혀 변화하려 하지 않아요</li>
         </ul>
         
-        <div style="background: #fef3c7; padding: 1.5rem; border-radius: 0.5rem; margin-top: 1.5rem;">
+        <div style="background: #fef3c7; padding: 24px; border-radius: 8px; margin-top: 24px;">
           <p style="color: #92400e;"><strong>혼자서 해결하기 어려운 이유</strong></p>
           <p style="font-size: 0.95rem; color: #92400e;">
             연애 문제는 단순한 관계의 문제가 아닙니다.<br>
@@ -253,21 +311,21 @@
     </div>
   </section>
 
-  <!-- 4. 최종 솔루션 (유료 상담) -->
-  <section class="final-solution-section">
+  <!-- 전문가 상담 섹션 -->
+  <section>
     <div class="container">
       <h2>전문가와 함께<br>근본적인 해결책을 찾아보세요</h2>
       
-      <div class="solution-card" style="margin-bottom: 2rem;">
+      <div class="solution-card">
         <h3>왜 수비학 타로 전문 상담인가요?</h3>
-        <ul class="checklist" style="margin-top: 1rem;">
+        <ul class="checklist">
           <li><strong>과학적 접근:</strong> 수비학의 숫자 체계를 통해 당신의 성향과 상대방의 성향을 객관적으로 분석합니다.</li>
           <li><strong>통합적 해석:</strong> 타로와 수비학을 결합해 현재 상황의 숨겨진 패턴과 해결 방향을 찾아냅니다.</li>
           <li><strong>실천적 솔루션:</strong> 단순한 진단에 그치지 않고, 실제 관계 개선을 위한 구체적인 실천 방법을 제시합니다.</li>
         </ul>
       </div>
 
-      <div class="solution-card" style="background: #f0f9ff; border-color: #bae6fd; margin-bottom: 2rem;">
+     <div class="solution-card" style="background: #f0f9ff; border-color: #bae6fd; margin-bottom: 2rem;">
         <h3 style="color: #0369a1">생생한 상담 후기</h3>
         
         <div style="background: white; padding: 1.2rem; border-radius: 0.5rem; margin-top: 1rem;">
@@ -325,17 +383,63 @@
           <p style="font-size: 0.9rem; color: #0369a1; margin-top: 0.5rem;">- 33세 교사 정OO님</p>
         </div>
       </div>
-      
+
+   <div class="faq-section">
+        <h3>자주 묻는 질문</h3>
+        
+        <div class="faq-item">
+          <h4>정말로 타로 & 수비학이 도움이 되나요?</h4>
+          <p>
+            단순한 운세가 아니라, <strong>'사람의 성향'</strong>을 숫자와 카드 상징을 통해 깊이 파고듭니다. 
+            상담을 받아보신 분들은 "논리적인 해석과 실천 방법이 꽤 구체적이다"라고 평가해 주십니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>한 번 상담으로 얼마나 해결될까요?</h4>
+          <p>
+            연애 문제는 케이스마다 다릅니다만, 최소한 "어디서부터 풀어야 할지" 명확히 아시게 됩니다. 
+            심층 보고서와 실행 팁을 드리니, 이후에도 스스로 점검하며 <strong>지속적 개선</strong>이 가능합니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>상담 후 만족하지 못하면요?</h4>
+          <p>
+            상담 종료 후 <strong>48시간 이내</strong>에 "별로 도움이 안 됐다"고 말씀 주시면, 
+            정해진 절차에 따라 <strong>상담료 50% 환불</strong>이 가능합니다. 
+            (자세한 조건은 하단 문의처로 연락 주세요.)
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>상담은 어떤 방식으로 진행되나요?</h4>
+          <p>
+            편안한 대화가 가능한 화상 상담으로 진행됩니다. 
+            상담 전 간단한 사전 설문을 통해 기본적인 정보를 파악하고, 
+            이를 바탕으로 더 효율적인 상담이 이루어질 수 있도록 준비합니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>개인 정보는 안전한가요?</h4>
+          <p>
+            모든 상담 내용과 개인정보는 철저히 비밀이 보장됩니다. 
+            상담 내용은 암호화되어 저장되며, 어떠한 경우에도 제3자에게 공개되지 않습니다.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- 가격 카드 -->
       <div class="price-card">
         <h3>1:1 프리미엄 연애 솔루션</h3>
-        <p style="color: #666;">수비학 타로와 전문 상담을 통한<br>근본적인 문제 해결</p>
+        <p style="color: var(--text-secondary);">수비학 타로와 전문 상담을 통한<br>근본적인 문제 해결</p>
         
-        <div class="price">
-          50,000원
-        </div>
+        <div class="price">50,000원</div>
         
-        <div style="text-align: left; background: #f8fafc; padding: 1.5rem; border-radius: 0.5rem; margin: 1.5rem 0;">
-          <p style="font-weight: 600; margin-bottom: 0.8rem;">상담 프로세스</p>
+        <div style="text-align: left; background: #f8fafc; padding: 24px; border-radius: 8px; margin: 24px 0;">
+          <p style="font-weight: 600; margin-bottom: 12px;">상담 프로세스</p>
           <ol style="list-style-position: inside; padding-left: 0;">
             <li>현재 상황 심층 분석 (20분)</li>
             <li>수비학 타로 해석 (20분)</li>
@@ -343,37 +447,34 @@
           </ol>
         </div>
         
-        <ul class="checklist">
+        <ul class="checklist" style="text-align: left;">
           <li><strong>60분 심층 1:1 화상 상담</strong> - 편안한 환경에서 솔직한 대화</li>
           <li><strong>맞춤형 연애 솔루션 문서 제공</strong> - 상담 내용 정리와 실천 가이드</li>
           <li><strong>2주간 카톡 후속 관리</strong> - 실천 과정에서의 질문과 피드백</li>
           <li><strong>긴급 상황 대응 가이드</strong> - 위기 상황별 대처법 제공</li>
         </ul>
-
-        <div style="background: #ecfdf5; padding: 1rem; border-radius: 0.5rem; margin: 1.5rem 0; text-align: left;">
+  <div style="background: #ecfdf5; padding: 24px; border-radius: 8px; margin: 24px 0; text-align: left;">
           <p style="color: #059669; font-weight: 600;">🎁 첫 상담 특별 혜택</p>
-          <p style="font-size: 0.9rem; color: #059669;">
+          <p style="font-size: 0.95rem; color: #059669;">
             첫 상담 고객님께는 '연애 궁합 심층 분석 보고서'를 추가로 제공해 드립니다. (가치: 30,000원)
           </p>
         </div>
         
         <a href="#booking" class="btn btn-primary">지금 바로 상담 예약하기</a>
-        <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">
+        <p style="font-size: 0.9rem; color: #666; margin-top: 16px;">
           * 예약금 10,000원 선결제 (총 상담료에서 차감)
         </p>
       </div>
 
-      <div style="text-align: center; margin-top: 2rem;">
-        <p style="color: #666;">아직 고민되시나요?</p>
-        <a href="#free-pdf" class="btn btn-secondary" style="margin-top: 0.5rem;">먼저 무료 PDF 받아보기</a>
-      </div>
-    </div>
-  </section>
+     
 
-  <footer style="text-align: center; padding: 4rem 0; color: var(--text-light);">
+  <!-- 푸터 -->
+  <footer>
     <div class="container">
       <p>&copy; 2024 수비학 타로. All Rights Reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>
+
