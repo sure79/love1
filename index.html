@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <title>수비학 타로 연애 해법</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- 구글 폰트 (Noto Sans KR) 불러오기 -->
+  <link rel="preconnect" href="https://fonts.gstatic.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* 기본 스타일 초기화 */
+    * {
+      box-sizing: border-box;
+      margin: 0; 
+      padding: 0;
+    }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    header, section, footer {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 1.2em;
+    }
+
+    /* 상단 헤더(브랜드/타이틀) */
+    header {
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      color: #222;
+    }
+    header p {
+      font-size: 1.05rem;
+      color: #666;
+      margin-bottom: 1.2em;
+      line-height: 1.6;
+    }
+
+    /* 히어로(문제제기) */
+    .hero {
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1.8em 1.2em;
+      margin-bottom: 1.5em;
+    }
+    .hero h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.8em;
+      color: #222;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 1.2em;
+      line-height: 1.6;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.8em 1.2em;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      background-color: #0078d4;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+      margin: 0.5em 0;
+    }
+    .btn-primary:hover {
+      background-color: #005da8;
+    }
+
+    /* 섹션 타이틀 */
+    section h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 0.8em;
+    }
+    section p {
+      font-size: 1rem;
+      margin-bottom: 1em;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* 하이라이트 박스 */
+    .highlight-box {
+      background-color: #fdf7e2;
+      border-left: 4px solid #ffd400;
+      padding: 1em;
+      margin-bottom: 1.2em;
+    }
+
+    /* 새 문제 제기 구역 */
+    .alert-box {
+      background-color: #fff0f0;
+      border-left: 4px solid #ff7676;
+      padding: 1em;
+      margin-bottom: 1.2em;
+    }
+
+    /* CTA 박스 (유료 상담 안내) */
+    .cta-box {
+      background-color: #f7f7f7;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 1.2em;
+      margin: 1.5em 0;
+      text-align: center;
+    }
+    .cta-box p {
+      margin-bottom: 1em;
+      color: #333;
+    }
+
+    /* FAQ / 보증 섹션 */
+    .faq-section {
+      background-color: #ffffff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 1.2em;
+      margin: 1em 0;
+    }
+    .faq-section h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+    }
+    .faq-item {
+      margin-bottom: 1.2em;
+    }
+    .faq-item h5 {
+      font-weight: 700;
+      margin-bottom: 0.3em;
+      color: #0078d4;
+    }
+    .faq-item p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* 반응형: 모바일/태블릿에서 글자 조금 키우기 */
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .hero h2 {
+        font-size: 1.3rem;
+      }
+      .btn-primary {
+        font-size: 0.95rem;
+      }
+      section h3 {
+        font-size: 1.2rem;
+      }
+      section p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header>
+    <h1>“수비학 타로”로<br>진짜 연애 고민 해결하기</h1>
+    <p>
+      잠깐 불안함으로 끝나는 문제가 아니라고 느껴지신다면,<br>
+      지금부터 확인해보세요.<br>
+      우리의 만남이 <strong>운명</strong>인지, <strong>착각</strong>인지<br>
+      수비학 타로가 명쾌한 해답을 드립니다.
+    </p>
+  </header>
+
+  <!-- 1) 문제제기 + 공감 -->
+  <div class="hero">
+    <h2>연애, 왜 이렇게 힘든 걸까요?</h2>
+    <p>
+      사소한 말다툼에도 금방 흔들리고,<br>
+      대화가 잘 풀린다 싶다가도<br>
+      어느 순간 돌처럼 굳은 분위기…<br><br>
+      “서로 마음이 식은 걸까?”<br>
+      “아니면 나만 노력 중인 걸까?”<br>
+      라는 생각이 계속 든다면,<br>
+      <strong>꼭 이 페이지를 읽어보세요.</strong>
+    </p>
+    <a class="btn-primary" href="#free-pdf">무료 PDF로 빠른 점검</a>
+  </div>
+
+  <!-- 2) 무료 PDF로 문제 해결: 첫 번째 솔루션 -->
+  <section id="free-pdf">
+    <h3>무료 PDF: 내 연애성향 & 갈등 포인트<br>간단 체크리스트</h3>
+    <p>
+      <strong>수비학 타로</strong>를 활용해<br>
+      <em>나와 상대방의 숫자</em>를 간단히 파악하고,<br>
+      갈등을 일으키는 <strong>핵심 포인트</strong>를 짚어봅니다.<br><br>
+      이미 많은 분들이 <strong>“이것만으로도 꽤 도움 됐다”</strong>고<br>
+      후기를 주신 간단 체크리스트 & 해설 PDF,<br>
+      지금 무료로 받아가세요!
+    </p>
+    <div class="highlight-box">
+      <p>
+        <strong>PDF 요약</strong><br>
+        - 운명수 계산법 &amp; 내 카드 특징<br>
+        - 대표적인 충돌 원인 3가지 &amp; 예방법<br>
+        - 당장 실천 가능한 대화 스킬 3선
+      </p>
+    </div>
+    <p style="text-align:center;">
+      <a class="btn-primary" href="#download-pdf">PDF 무료 다운로드</a>
+    </p>
+  </section>
+
+  <!-- (가상의 PDF 다운로드 안내 구역. 실제 링크/메일 폼 연동) -->
+  <section id="download-pdf">
+    <h3>다운로드 방법</h3>
+    <p>
+      아래 버튼을 클릭하면,<br>
+      간단한 이메일 입력 후<br>
+      PDF 파일을 즉시 수령하실 수 있습니다.
+    </p>
+    <p style="text-align:center;">
+      <a class="btn-primary" href="#" onclick="alert('다운로드 링크(또는 폼)로 연결!');">즉시 받기</a>
+    </p>
+  </section>
+
+  <!-- 3) 새로운 문제 제기: 무료 PDF만으로는 부족할 수도... -->
+  <section>
+    <div class="alert-box">
+      <h3>그런데… 막상 적용해보면?</h3>
+      <p>
+        무료 PDF로 <em>기본적인 갈등 원인</em>을 파악하고,<br>
+        개선책도 시도해보지만,<br>
+        현실의 <strong>연애</strong>는 훨씬 복잡할 수 있습니다.<br><br>
+
+        예를 들어,<br>
+        1) 대화법을 바꿔보려 해도 내 오랜 습관이<br>
+           잘 안 고쳐지고,<br><br>
+        2) 상대방이 아예 말문을 닫아버려<br>
+           시도할 기회조차 주지 않을 때,<br><br>
+        3) 단순한 말싸움이 아니라<br>
+           <strong>깊은 상처, 과거 트라우마</strong>가 얽혀 있을 때…<br><br>
+
+        _“아, 이거… 생각보다 간단치 않네?”_<br>
+        라는 생각이 드실 수 있습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4) 유료 상담 안내: 더 심층적인 해결책 -->
+  <section>
+    <h3>결국, 제대로 해결하려면?</h3>
+    <p>
+      “나만의 상황”에 맞춘<br>
+      <strong>1:1 심층 해석 &amp; 솔루션</strong>이 필요합니다.<br><br>
+      그래서 저희는 <em>‘수비학 타로’</em>의 장점을 극대화해<br>
+      단순 가이드 이상의 <strong>맞춤 상담</strong>을 진행하고 있어요.
+    </p>
+    <div class="cta-box">
+      <p><strong>[유료 상담] 1:1 맞춤형 연애 코칭</strong></p>
+      <p>
+        &middot; 나 &amp; 상대방의 운명수/카드 조합 심층 분석<br>
+        &middot; ‘말 못 할 사정’까지 고려한 갈등 해결 로드맵<br>
+        &middot; 해운(년·월 운) 주기별 스케줄 &amp; 타이밍 전략<br>
+        &middot; 롱런하기 위한 관계 유지 비법
+      </p>
+      <p>
+        <strong>1회 60분 집중 세션 + 결과 리포트</strong>로,<br>
+        더 이상 막연한 ‘답답함’이 아닌<br>
+        <em>명확한 해답</em>을 손에 쥐게 되실 겁니다.
+      </p>
+      <a class="btn-primary" href="#contact">상담 예약하기</a>
+    </div>
+  </section>
+
+  <!-- 5) FAQ / 보증 / 신뢰 섹션: (예시) -->
+  <section class="faq-section">
+    <h4>자주 묻는 질문(FAQ)</h4>
+
+    <div class="faq-item">
+      <h5>Q. 정말로 타로 & 수비학이 도움이 되나요?</h5>
+      <p>
+        단순한 운세가 아니라, <strong>‘사람의 성향’</strong>을  
+        숫자와 카드 상징을 통해 깊이 파고듭니다.  
+        상담을 받아보신 분들은  
+        “논리적인 해석과 실천 방법이 꽤 구체적이다”라고 평가해 주십니다.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h5>Q. 한 번 상담으로 얼마나 해결될까요?</h5>
+      <p>
+        연애 문제는 케이스마다 다릅니다만,  
+        최소한 “어디서부터 풀어야 할지” 명확히 아시게 됩니다.  
+        심층 보고서와 실행 팁을 드리니,  
+        이후에도 스스로 점검하며 <strong>지속적 개선</strong>이 가능합니다.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h5>Q. 상담 후 만족하지 못하면요?</h5>
+      <p>
+        상담 종료 후 <strong>48시간 이내</strong>에  
+        “별로 도움이 안 됐다”고 말씀 주시면,  
+        정해진 절차에 따라 <strong>상담료 50% 환불</strong>이 가능합니다.  
+        (자세한 조건은 하단 문의처로 연락 주세요.)
+      </p>
+    </div>
+  </section>
+
+  <!-- 6) 최종 CTA 섹션 -->
+  <section id="contact">
+    <h3>지금 바로 시작해보세요</h3>
+    <p>
+      이 페이지를 여기까지 보셨다는 건,<br>
+      이미 당신의 연애를 <strong>‘그냥 포기’</strong>하긴 어렵다는 뜻이겠죠?<br><br>
+      지금 결단하시면,<br>
+      “답답함, 불안함”으로 무너져가던 연애가<br>
+      <strong>“한 단계 성숙한 관계”</strong>로 도약할 수 있습니다.
+    </p>
+    <div style="text-align:center; margin-bottom:1.5em;">
+      <a class="btn-primary" href="#inquire-form" style="margin-right:0.5em;">상담 예약하기</a>
+      <a class="btn-primary" href="#free-pdf">먼저 무료 PDF 보기</a>
+    </div>
+    <p>
+      <strong>문의 / 예약:</strong><br>
+      &middot; 카카오톡 오픈채팅: <a href="#">링크</a><br>
+      &middot; 이메일: <a href="mailto:someone@example.com">someone@example.com</a><br>
+      &middot; 홈페이지: <a href="#">www.example.com</a>
+    </p>
+  </section>
+
+  <!-- (추가) 예시 폼 섹션: 실제로 사용하실 경우 폼으로 구현 가능 -->
+  <section id="inquire-form">
+    <h3>예약/문의 폼</h3>
+    <p>이 부분은 실제 상담 신청받을 때 필요한 간단한 폼 예시입니다.</p>
+    <!-- 폼은 가상의 코드. 실제 서버 연결 필요 -->
+    <form onsubmit="alert('상담 신청이 접수되었습니다!'); return false;" style="max-width:450px; margin:0 auto;">
+      <label for="name">이름</label><br>
+      <input type="text" id="name" name="name" style="width:100%; margin-bottom:0.5em;" required/>
+
+      <label for="email">이메일</label><br>
+      <input type="email" id="email" name="email" style="width:100%; margin-bottom:0.5em;" required/>
+
+      <label for="message">문의 내용</label><br>
+      <textarea id="message" name="message" rows="4" style="width:100%; margin-bottom:0.5em;" required></textarea>
+
+      <button class="btn-primary" type="submit" style="width:100%;">상담 신청하기</button>
+    </form>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <p style="text-align:center; color:#aaa; margin-top:1.5em;">
+      &copy; 2023 수비학 타로. All Rights Reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
